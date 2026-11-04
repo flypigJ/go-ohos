@@ -1,5 +1,7 @@
 # Go for OpenHarmony
 
+[![Host checks](https://github.com/flypigJ/go-ohos/actions/workflows/port.yml/badge.svg?branch=main)](https://github.com/flypigJ/go-ohos/actions/workflows/port.yml)
+
 A community OpenHarmony port of Go 1.27.3, maintained alongside MeshArc.
 
 [中文说明](README.zh-CN.md) · [Build](ohos/docs/build.md) · [Platform limits](ohos/docs/platform.md) · [Validation](ohos/docs/validation.md) · [Maintenance](ohos/docs/maintenance.md)
