@@ -21,8 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           persist-credentials: false
+      - name: Fetch pinned upstream tree
+        shell: pwsh
+        run: |
+          $base = (Get-Content ohos/source.json | ConvertFrom-Json).upstream_commit
+          git fetch --no-tags --depth=1 origin $base
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.12'
