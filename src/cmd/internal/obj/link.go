@@ -1191,6 +1191,7 @@ type Link struct {
 	DebugInfo       func(ctxt *Link, fn *LSym, info *LSym, curfn Func) ([]dwarf.Scope, dwarf.InlCalls)
 	GenAbstractFunc func(fn *LSym)
 	Errors          int
+	Tls             string
 
 	InParallel    bool // parallel backend phase in effect
 	UseBASEntries bool // use Base Address Selection Entries in location lists and PC ranges

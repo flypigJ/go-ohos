@@ -339,6 +339,7 @@ func TestCgoCrashTraceback(t *testing.T) {
 	case "linux/loong64":
 	case "linux/ppc64":
 	case "linux/ppc64le":
+	case "openharmony/arm64":
 	default:
 		t.Skipf("not yet supported on %s", platform)
 	}
@@ -365,6 +366,7 @@ func TestCgoCrashTracebackGo(t *testing.T) {
 	case "linux/loong64":
 	case "linux/ppc64":
 	case "linux/ppc64le":
+	case "openharmony/arm64":
 	default:
 		t.Skipf("not yet supported on %s", platform)
 	}

@@ -137,6 +137,14 @@ const (
 	// referenced (thread local) symbol from the GOT.
 	R_ARM64_TLS_IE
 
+	// Relocates an ADRP; LD64; ADD; BLR instruction sequence:
+	// - ADRP gets part of the address of the GOT entry for thread-local variable
+	// - LD64 loads the stub address from the GOT entry
+	// - ADD is part of address calculation for the GOT entry to pass as argument
+	// - BLR calls the stub passing the calculated address.
+	// The stub returns the variable offset from the thread pointer in R0.
+	R_ARM64_TLS_GD
+
 	// R_ARM64_GOTPCREL relocates an adrp, ld64 pair to compute the address of the GOT
 	// slot of the referenced symbol.
 	R_ARM64_GOTPCREL

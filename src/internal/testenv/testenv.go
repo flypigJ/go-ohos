@@ -28,6 +28,13 @@ import (
 	"testing"
 )
 
+func getGoos() string {
+	if runtime.IsOpenharmony {
+		return "openharmony"
+	}
+	return runtime.GOOS
+}
+
 // Save the original environment during init for use in checks. A test
 // binary may modify its environment before calling HasExec to change its
 // behavior (such as mimicking a command-line tool), and that modified

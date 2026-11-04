@@ -1,0 +1,452 @@
+{
+  "upstream_tree": "09275a3482ffe831661a72c202c6261e0eb6ae7f",
+  "files": [
+    {
+      "path": "src/cmd/asm/internal/flags/flags.go",
+      "sha256": "6f03aaad89a2faf69b23d07406c5807a73d9e9ae1b389a9750e8e45da165da5a"
+    },
+    {
+      "path": "src/cmd/asm/main.go",
+      "sha256": "3c49649a8f09c4f07533e5830814128ddecc202a8cdca40d81cca91e8c1c9e9b"
+    },
+    {
+      "path": "src/cmd/cgo/internal/test/cgo_linux_test.go",
+      "sha256": "200a913d0479ee1ca6a691957ad8c30f801fcd2428bb02a79630ae02a51e97dc"
+    },
+    {
+      "path": "src/cmd/cgo/internal/test/cgo_stubs_openharmony_test.go",
+      "sha256": "0f8bee611207a94143f992da6c16a1dab141f049ad286e5b8b915df2c6f351a5"
+    },
+    {
+      "path": "src/cmd/cgo/internal/test/issue6997_linux.c",
+      "sha256": "6d79a480eb0ecba66e30b425ad828a7a0e031d3e9072b8a6b7e774bd446f337c"
+    },
+    {
+      "path": "src/cmd/cgo/internal/test/issue6997_linux.go",
+      "sha256": "d9bc3691426bbcdc91ae9c9409141a15a98caf9bcfa78baf0a37219c2bc06922"
+    },
+    {
+      "path": "src/cmd/cgo/internal/testcarchive/carchive_test.go",
+      "sha256": "b04002eb3cd45377464b30da01406c3886d395cd7ea76cf9b8c591f14c4d015c"
+    },
+    {
+      "path": "src/cmd/cgo/internal/testcshared/cshared_test.go",
+      "sha256": "515904f513db707071062c7f90dc33ff72810e02646b561ccfd8f16395c9fb3e"
+    },
+    {
+      "path": "src/cmd/compile/internal/loopvar/loopvar_test.go",
+      "sha256": "1778285324d9bd0dc72fb053268f2b01318f3a0673c6438256f6fd85a4d42a28"
+    },
+    {
+      "path": "src/cmd/compile/internal/ssa/debug_lines_test.go",
+      "sha256": "de060fab4a0205b39e32e2a28f5c104eac3e412203e49fed76cf9d15e85e14b7"
+    },
+    {
+      "path": "src/cmd/compile/internal/ssa/fmahash_test.go",
+      "sha256": "c973557dc279224ead5b67499a186dd0aea840f18c0a02e2700c781b2872eadd"
+    },
+    {
+      "path": "src/cmd/dist/build.go",
+      "sha256": "9271cf17a9f4e17ecf4b31b50e49e3469f1069427855a1f04a700933eb39a7f6"
+    },
+    {
+      "path": "src/cmd/dist/test.go",
+      "sha256": "da21f786b6de6397eea3535a9ace02e0086dfe35809ea1e24a5ff43bba0bbb8b"
+    },
+    {
+      "path": "src/cmd/distpack/test.go",
+      "sha256": "21b7f3fdfb40e6790f2e0b91193d47c7910716a333f6495d695d62c9f2a1b470"
+    },
+    {
+      "path": "src/cmd/go/go_test.go",
+      "sha256": "793e1a85e0cbcfd451cb3bfa5844a7e645cf3fd393e127ee6ebae37788a49440"
+    },
+    {
+      "path": "src/cmd/go/internal/bug/bug.go",
+      "sha256": "0d77e16c91346d144cebd30672f4498bbdba51ba91197b182fa66ade2d7babe2"
+    },
+    {
+      "path": "src/cmd/go/internal/cfg/cfg.go",
+      "sha256": "c8f1f8426f7f306706f7349f1d5129b0d48b3d717e0f8d83c27798c7ab44c9b1"
+    },
+    {
+      "path": "src/cmd/go/internal/envcmd/env.go",
+      "sha256": "6b37068acba1ac04bcddc87ca1fd5f65852d51e2e1210806ec1200de07731845"
+    },
+    {
+      "path": "src/cmd/go/internal/generate/generate_test.go",
+      "sha256": "f8e80f9116c1ec187e79f4c49cc70bf270cdafac864d4a8655fabd415bf47c2d"
+    },
+    {
+      "path": "src/cmd/go/internal/imports/build.go",
+      "sha256": "39d6a65c181ed4dc1959a35cb161d8b38435dcdff8238079229df8cf80d897eb"
+    },
+    {
+      "path": "src/cmd/go/internal/load/pkg.go",
+      "sha256": "8a98701cfb5321e7c7e8a5e3bc25ab9f38a677fc9417a2f55ae61246262a9fcf"
+    },
+    {
+      "path": "src/cmd/go/internal/modindex/build.go",
+      "sha256": "5df2adb12c5cc9b267c934de396ed43e3d8c666b95cfdf51e18a26de0930a5db"
+    },
+    {
+      "path": "src/cmd/go/internal/work/exec.go",
+      "sha256": "726869a6ce8ecb0756a1e207851b33743bd41d896a8041af51888cd07666f316"
+    },
+    {
+      "path": "src/cmd/go/internal/work/gccgo.go",
+      "sha256": "802a4f1cbe18c229564fa900b7e16f78fb2409feb92867673a60ce1dfee8e7f3"
+    },
+    {
+      "path": "src/cmd/go/internal/work/init.go",
+      "sha256": "5b0626e53cb4b9ce7b7c6caec7abf628f990366c68a3b64e726fa1a2542db221"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/bug.txt",
+      "sha256": "e5468f48485f610d231fdcff6d2572756fc26554848e945ba1373dd20f353ce6"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/build_gcflags.txt",
+      "sha256": "2505df64a76482b819933e2fc4a3ecc13ee994f4b9651b7e33dbf2e1cf5d89a7"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_atomic_pkgall.txt",
+      "sha256": "2c4a3933b77f58d67b5967c51dfd74964aa40616fed6e5d714857b1158e8d2bc"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_build_simple.txt",
+      "sha256": "05bdba828537307c819ce3fb21a0c931c4aea5a9103876bcfceb0c2d59b097b9"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_modes.txt",
+      "sha256": "048a9ab48a36b07e4ace35a9d5cd3748fcc9fec68abd46db89c0d9e115ca5dbb"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_pkgall_runtime.txt",
+      "sha256": "425b20eea980c85216a15aee5b263d919be545bf84226604bea994576778b7bb"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_sync_atomic_import.txt",
+      "sha256": "4cfb158e1962f3ccfe6b518d5949d616d9ce807289f7202a928deed5885d51e2"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/cover_test_race_issue56370.txt",
+      "sha256": "0e294f6481514948735aa793e532f3ead05fcb1dc80f52c17d35dd7d643f3fc8"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/gotoolchain_net.txt",
+      "sha256": "62a5756631d8cea81aa17184bdbbaed53a2cc913c8570af19a42209f5f89d271"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/test_empty.txt",
+      "sha256": "485881e66c0b67cad977a03b9a36d5a0458a81449b3d25deb85302ae2e92f864"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/test_race.txt",
+      "sha256": "3a430397824e4b9d5cde7bb3794ada16838886212c8a51dd29def9f8e84beb2d"
+    },
+    {
+      "path": "src/cmd/go/testdata/script/testing_issue40908.txt",
+      "sha256": "0944d8cc0f095d970245d3c5a93dae688ac9618e87cf38fb7a61e1a5b717c204"
+    },
+    {
+      "path": "src/cmd/internal/bootstrap_test/reboot_test.go",
+      "sha256": "b669b73c6748bf28e747d0bfff45c8e77ee3aa3b6666106d94d4caa4336df6ae"
+    },
+    {
+      "path": "src/cmd/internal/obj/arm64/a.out.go",
+      "sha256": "9c28baa80ff04adbee753fd8f8ac827e16eaa68b913f8c608901678ad6ff5d35"
+    },
+    {
+      "path": "src/cmd/internal/obj/arm64/asm7.go",
+      "sha256": "04ed22af434824dd92fcc245d4da90b1cc250fd9938a437910c883ae1f052860"
+    },
+    {
+      "path": "src/cmd/internal/obj/link.go",
+      "sha256": "ed71c032ee0301eab49ac009f2d7c4ad124fb02f6a64d9b5b50e86d32304365d"
+    },
+    {
+      "path": "src/cmd/internal/objabi/head.go",
+      "sha256": "7de3a1f1ae65ad3b0b329ec7ff094d2f338592748bb9d1f242bedf8d9c4028f9"
+    },
+    {
+      "path": "src/cmd/internal/objabi/reloctype.go",
+      "sha256": "0007f46505bce5d6950e1287f7d5044b3fdbb2290e9c402a5c3d5ebb437a85e6"
+    },
+    {
+      "path": "src/cmd/internal/objabi/reloctype_string.go",
+      "sha256": "5f1771c598bf278bb587e72053b860e72df4c3e32909d3000981536178b71821"
+    },
+    {
+      "path": "src/cmd/internal/script/conds.go",
+      "sha256": "2a0b4ada0db1352ea29253d8334a346eaa340571a1de69af1371af3ee2d3e7fd"
+    },
+    {
+      "path": "src/cmd/internal/testdir/testdir_test.go",
+      "sha256": "b91fd4b30decdd3fd602d0649588c4fffd530766c62bc63cc096a9f0f45464d1"
+    },
+    {
+      "path": "src/cmd/link/internal/arm64/asm.go",
+      "sha256": "ef5c40ce49008eeae56b09f7552d2d156f1ab81a303feb0969948879c866bb54"
+    },
+    {
+      "path": "src/cmd/link/internal/ld/lib.go",
+      "sha256": "a65f6b6d6c950754aa94d3616676119e81f1abe1208b2e2108cd90911bb7998d"
+    },
+    {
+      "path": "src/cmd/link/link_test.go",
+      "sha256": "813cfce57b150d93bd45b53ac06ae4270e6f660a346501d36a70062bd35c8a9e"
+    },
+    {
+      "path": "src/go/build/build.go",
+      "sha256": "2bb12a054248257ca798ca33cd652a03d469cfebe3370475eb86284596832a7a"
+    },
+    {
+      "path": "src/go/build/gc.go",
+      "sha256": "e3128a1939ef1ca000735adb45a5f7709c58b96cd7b054622673654376d5c49f"
+    },
+    {
+      "path": "src/internal/coverage/cfile/emitdata_test.go",
+      "sha256": "42aa4022b6a8bb5e3a99ed0fd6591d175f81d0877dc74cf70eb62d49889f5d14"
+    },
+    {
+      "path": "src/internal/cpu/cpu_arm64_other.go",
+      "sha256": "994d8495194e8636dd2fe333108fe3867955dc48334efe25efba0ea1ef2c13bf"
+    },
+    {
+      "path": "src/internal/goos/gengoos.go",
+      "sha256": "4d3a9d8a4f68b1536caf48b8d6dd63733c24e63db0b800efe5710114b2b51db9"
+    },
+    {
+      "path": "src/internal/goos/zgoos_aix.go",
+      "sha256": "c7508003ab9bd1c41684b8a45f0185a073bd0032c68f0e6e01ce753ef9683b20"
+    },
+    {
+      "path": "src/internal/goos/zgoos_android.go",
+      "sha256": "274e3eec93f697f3079d341d63aa6285725cc4a3024c941271f4474748557171"
+    },
+    {
+      "path": "src/internal/goos/zgoos_darwin.go",
+      "sha256": "9949745d3a206f877895c64a395520d966caa6f842172d3c41d8b2872ed54e55"
+    },
+    {
+      "path": "src/internal/goos/zgoos_dragonfly.go",
+      "sha256": "d5d94a3e71d5bfd83d5e4e1b43bcc29e4683f43f7194e7b4c2414ab8166a5d98"
+    },
+    {
+      "path": "src/internal/goos/zgoos_freebsd.go",
+      "sha256": "acaa2fb721a96de8f81a2567ac9fe40db3b4431f373492e451b7685e02997087"
+    },
+    {
+      "path": "src/internal/goos/zgoos_hurd.go",
+      "sha256": "777e3e545cdb9632313cb3466af5e53fe6553a89910348f41884d8a87528a624"
+    },
+    {
+      "path": "src/internal/goos/zgoos_illumos.go",
+      "sha256": "38fe3a691c952d3a99fa3c2d2d1aeb35753282fa727986d54a83b57dd79ead4a"
+    },
+    {
+      "path": "src/internal/goos/zgoos_ios.go",
+      "sha256": "fe8d7607cbdab0ff799473a580682d9c0d4fc2babe41bc709fa2ab97129b999e"
+    },
+    {
+      "path": "src/internal/goos/zgoos_js.go",
+      "sha256": "24b7af4b81439bcdb028fc87c353cfc9e1efe0aa3f98ba03e31210ce0e8c7967"
+    },
+    {
+      "path": "src/internal/goos/zgoos_linux.go",
+      "sha256": "1306299ec3775bb5d02d415625d67209e2e85b2cf205497b12ab3e64fe922caf"
+    },
+    {
+      "path": "src/internal/goos/zgoos_netbsd.go",
+      "sha256": "edc29e809d4286904216886370ceb0b23942483cb031d233fd41473e1bf78225"
+    },
+    {
+      "path": "src/internal/goos/zgoos_openbsd.go",
+      "sha256": "a87b5bf9816a766d0165f4fb0d0323512e1dac0931387f8a177863baec6433a3"
+    },
+    {
+      "path": "src/internal/goos/zgoos_openharmony.go",
+      "sha256": "3d4f911dc141375cc287fe4b366af0f4f477ca4b96f5d494a096fe068783c6c7"
+    },
+    {
+      "path": "src/internal/goos/zgoos_plan9.go",
+      "sha256": "0bdecb13ee8763558b0cf7f0a8edc4fd79555fdec7a96239396fda4f1dcd1738"
+    },
+    {
+      "path": "src/internal/goos/zgoos_solaris.go",
+      "sha256": "062da9bd7c550422720c2a6063b697e3f572c0d1cbcab4e949e4f070adb21c71"
+    },
+    {
+      "path": "src/internal/goos/zgoos_wasip1.go",
+      "sha256": "c07649faf1c948503d2777b26406929ebaf9dc6c8a6afb63e429d6d2bcaaddc6"
+    },
+    {
+      "path": "src/internal/goos/zgoos_windows.go",
+      "sha256": "4b78e7fcc85fb0f762c5e58b6da8167ad8e2dc0f6f0194b0d9f04e53c71a4474"
+    },
+    {
+      "path": "src/internal/goos/zgoos_zos.go",
+      "sha256": "af435aabb6fdfad5a573187d8d5afb9260bd1e130b4ecfe19689e2c9bd5967eb"
+    },
+    {
+      "path": "src/internal/platform/supported.go",
+      "sha256": "1b8b673c7dcb1ba37d49d72f0081e7354234751267ececad329a021bad0f8dc3"
+    },
+    {
+      "path": "src/internal/platform/zosarch.go",
+      "sha256": "02baa74339c1789b0d92c819e017f79c0678636eac5badd52ab0883c486b1f46"
+    },
+    {
+      "path": "src/internal/syslist/syslist.go",
+      "sha256": "7ce33eda29cbebf9f328937e61e02c0387441c15999a6b0ec2b7396c714cc26b"
+    },
+    {
+      "path": "src/internal/testenv/testenv.go",
+      "sha256": "1f93133c4bfc1d7b15d86e1713c2ffa301bab8a6614d0c3ceed3b6d96ea2569f"
+    },
+    {
+      "path": "src/mime/type_openharmony.go",
+      "sha256": "35b6e00dc0467f468ba9d58e70030489a2a85159366d61c09d5db58889f63323"
+    },
+    {
+      "path": "src/net/cgo_unix_cgo.go",
+      "sha256": "73e537fcb35a65f31e16d71d3c6d573c6c6b293699cf1b3a61d559acbdb1f483"
+    },
+    {
+      "path": "src/net/conf.go",
+      "sha256": "bebbd2df1d6a9472393233ff3cb6945f5ca05917663e404862e85f452f5f8a4b"
+    },
+    {
+      "path": "src/net/interface_linux.go",
+      "sha256": "961680ffd59f6c36cb24787604957abaf02dc41329a3621690d34164cfdfff5b"
+    },
+    {
+      "path": "src/net/interface_table_linux.go",
+      "sha256": "de328b840aff6861e2dced75facc5b1f6cc07e752da910753eacdc3dd2e9ffe2"
+    },
+    {
+      "path": "src/net/interface_table_openharmony.go",
+      "sha256": "60fed841d0c5cf7355ff21528a56f060cf6d5d6f2691fd4011dcd9e5a1c3a175"
+    },
+    {
+      "path": "src/net/parse_test.go",
+      "sha256": "2b25e08475690811fbe2c154a6b74a70266470bdfa3ddc4cad72be102060b108"
+    },
+    {
+      "path": "src/os/file_unix.go",
+      "sha256": "dded884249f30b38fbca65c7f790b9502ab4787e9083fb7d47013dce5313efcc"
+    },
+    {
+      "path": "src/os/os_test.go",
+      "sha256": "f16de0b724e1f1f0de3908467acd674806d5b360e71d49b7aa48679cdb330d9b"
+    },
+    {
+      "path": "src/os/user/user_test.go",
+      "sha256": "168b422f8d1c6edc5461fdeb832c750eca5300489ccf276aff2809a792268922"
+    },
+    {
+      "path": "src/runtime/asm_arm64.s",
+      "sha256": "2f3082d351bdde3bc3f5ca671b3afa097b5f253bac05fea258e976b9d6571ffc"
+    },
+    {
+      "path": "src/runtime/cgo/callbacks_musl_linux.go",
+      "sha256": "c4de38f70ecf9eed98fdcc69e595c44c8830890a8b2ab1f143c533a39ef81cf3"
+    },
+    {
+      "path": "src/runtime/cgo/gcc_musl_linux.c",
+      "sha256": "c4608ac517c4e8dab69f4964cd0a920d59c483025c1d5768e7a170603ee9535a"
+    },
+    {
+      "path": "src/runtime/crash_cgo_test.go",
+      "sha256": "45f6bfd3d88ff14e52378d283a9c113de43db6a1dcb250ff1f11f85246d1a6f8"
+    },
+    {
+      "path": "src/runtime/extern.go",
+      "sha256": "f3fcf6fe58cf87c9665112f5bf967ef346ebe03081bf9773884b909a36ee6259"
+    },
+    {
+      "path": "src/runtime/heap_addr_bits_test.go",
+      "sha256": "16eca6ef77a9999880bea1fff256736176bf5eb82b7881faa061fbf20865ac68"
+    },
+    {
+      "path": "src/runtime/malloc.go",
+      "sha256": "f7b48be2adeae475be31fe7821904671e0dcf61402996fb48acf5367618b7e88"
+    },
+    {
+      "path": "src/runtime/mgcscavenge_test.go",
+      "sha256": "57c45044ef5e1eaf98c17817af843c8d9b1daf22ddd977481e6c985240c825dd"
+    },
+    {
+      "path": "src/runtime/mpagealloc_test.go",
+      "sha256": "ea75d730b75805d4edea4cbd45e93c442ed9a07d77d24f02ac61f87c3bb6bca8"
+    },
+    {
+      "path": "src/runtime/mpagecache_test.go",
+      "sha256": "1a469d3b7d5ffe82034a7a3a639851aeca2eec5e2974d62c390edc3c000ffb54"
+    },
+    {
+      "path": "src/runtime/os_linux.go",
+      "sha256": "6cba27ba2f44fa7b2b62d479a05ad681b6eb4fddb8303534bf2a7d336f5a7174"
+    },
+    {
+      "path": "src/runtime/proc.go",
+      "sha256": "12779d32db24eedbfd96be7804187c363912e8ce0267d586b446d4bbabe7fffc"
+    },
+    {
+      "path": "src/runtime/race_arm64.s",
+      "sha256": "ddea27dcdcd9b10d34bcfaa2199f240bac97d791a9cafe6f80fc315e4590a02a"
+    },
+    {
+      "path": "src/runtime/rt0_openharmony_arm64.s",
+      "sha256": "061abe5af3b828758c66d4736918162695178f1dec0af6371c6030dd3dd505d7"
+    },
+    {
+      "path": "src/runtime/runtime1.go",
+      "sha256": "e056e8eb7db417fc29a91384395998973451cd67226804c9b08dd9bd345709cd"
+    },
+    {
+      "path": "src/runtime/runtime2.go",
+      "sha256": "acc7f43f2d3edd8134897cb993e1b9923489b7991ea443a7f69dbce94e200054"
+    },
+    {
+      "path": "src/runtime/runtime_test.go",
+      "sha256": "411cef5a20b8137a09a6a5b887cdf3cd899e522492f43362db1aeb3727b3298c"
+    },
+    {
+      "path": "src/runtime/tls_arm64.h",
+      "sha256": "bdbc940088f69ab8c98b0dbc313fd8c5dd5f76fe15ffa00969fc8d3261e6998a"
+    },
+    {
+      "path": "src/runtime/tls_arm64.s",
+      "sha256": "e6c0b147f27de6f253ffeb45ef821348dc420c7a12a27a1b9bccd981dc46203d"
+    },
+    {
+      "path": "src/syscall/exec_linux_test.go",
+      "sha256": "ec30e979c192d18831bb6e7832d998967e7481034e619c7a80e48aa86c054a01"
+    },
+    {
+      "path": "src/testing/benchmark.go",
+      "sha256": "01e0480209e15e6e219dcc568020e9a531448043b703f5d2e7d76d379eb805be"
+    },
+    {
+      "path": "src/time/zoneinfo_openharmony.go",
+      "sha256": "ef520baaab9cbf8f8d57328f38c1a68d13d734c34fea2d6594cd4169c995b41c"
+    },
+    {
+      "path": "src/time/zoneinfo_unix.go",
+      "sha256": "be6deeb2225dae57c233faee8905f6a92cbd01a1dbe08caebf1428a78e68864e"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "717d36bd1ca25f07c0db483568a9271aabeb65d00783a781ad8213cf60ef65b8"
+    }
+  ],
+  "inherited_port_patch_sha256": "f41b824aa95c2891968eef7277fb7f29f16e28bf18609a79267e0e2e93fc14a4",
+  "upstream_commit": "2aae1000ea1d4b28923b96db28acf4e3b99d6aff",
+  "source_archive_sha256": "6e7749035cf360f06b2575d162ea79df9fda8ef671889e5c375f8e50777f26bb",
+  "upstream_repository": "https://go.googlesource.com/go",
+  "identity": "go1.27.3-ohos-devel",
+  "schema": 1,
+  "upstream_tag": "go1.27.3"
+}

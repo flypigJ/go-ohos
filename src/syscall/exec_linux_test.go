@@ -30,6 +30,13 @@ import (
 	"unsafe"
 )
 
+func getGoos() string {
+	if runtime.IsOpenharmony {
+		return "openharmony"
+	}
+	return runtime.GOOS
+}
+
 // whoamiNEWUSER returns a command that runs "whoami" with CLONE_NEWUSER,
 // mapping uid and gid 0 to the actual uid and gid of the test.
 func whoamiNEWUSER(t *testing.T, uid, gid int, setgroups bool) *exec.Cmd {
@@ -646,6 +653,11 @@ func testAmbientCaps(t *testing.T, userns bool) {
 	// skip on android, due to lack of lookup support
 	if runtime.GOOS == "android" {
 		t.Skip("skipping test on android; see Issue 27327")
+	}
+
+	// skip on openharmony, due to lack of nobody user
+	if runtime.IsOpenharmony {
+		t.Skip("skipping test on openharmony, due to lack of nobody user")
 	}
 
 	u, err := user.Lookup("nobody")

@@ -238,6 +238,10 @@ func TestMain(m *testing.M) {
 		os.Setenv("TESTGO_GOHOSTARCH", goHostArch)
 
 		cgoEnabled = goEnv("CGO_ENABLED")
+		goos = runtime.GOOS
+		if runtime.IsOpenharmony {
+			goos = "openharmony"
+		}
 
 		// Duplicate the test executable into the path at testGo, for $PATH.
 		// If the OS supports symlinks, use them instead of copying bytes.

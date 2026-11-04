@@ -488,7 +488,7 @@ func (ctxt *Link) extld() []string {
 		// This only matters when link tool is called directly without explicit -extld,
 		// go tool already passes the correct linker in other cases.
 		switch buildcfg.GOOS {
-		case "darwin", "freebsd", "openbsd":
+		case "darwin", "freebsd", "openbsd", "openharmony":
 			flagExtld = []string{"clang"}
 		default:
 			flagExtld = []string{"gcc"}
@@ -1722,7 +1722,13 @@ func (ctxt *Link) hostlink() {
 		// from the beginning of the section (like sym.STYPE).
 		argv = append(argv, "-Wl,-z,nocopyreloc")
 
-		if buildcfg.GOOS == "android" {
+		// On ohos, since RTLD_GLOBAL is ignored by dlopen since it's following bionic, so need set to .dynamic
+		// https://github.com/bminor/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/elf.h#L960
+		if buildcfg.GOOS == "openharmony" {
+			argv = append(argv, "-Wl,-z,global")
+		}
+
+		if buildcfg.GOOS == "android" || buildcfg.GOOS == "openharmony" {
 			// Use lld to avoid errors from default linker (issue #38838)
 			altLinker = "lld"
 		}

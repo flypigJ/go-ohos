@@ -158,6 +158,19 @@ func equal(name1, name2 string) (r bool) {
 	return
 }
 
+// localTmp returns a local temporary directory not on NFS.
+func localTmp() string {
+	switch runtime.GOOS {
+	case "android", "ios", "windows":
+		return TempDir()
+	case "linux":
+		if runtime.IsOpenharmony {
+			return TempDir()
+		}
+	}
+	return "/tmp"
+}
+
 func newFile(t *testing.T) (f *File) {
 	t.Helper()
 	f, err := CreateTemp("", "_Go_"+t.Name())
@@ -626,6 +639,10 @@ func TestReaddirnamesOneAtATime(t *testing.T) {
 	// big directory that doesn't change often.
 	dir := "/usr/bin"
 	switch runtime.GOOS {
+	case "linux":
+		if runtime.IsOpenharmony {
+			dir = "/system/bin"
+		}
 	case "android":
 		dir = "/system/bin"
 	case "ios", "wasip1":
@@ -1673,6 +1690,10 @@ func TestChdirAndGetwd(t *testing.T) {
 	dirs := []string{"/", "/usr/bin", "/tmp"}
 	// /usr/bin does not usually exist on Plan 9 or Android.
 	switch runtime.GOOS {
+	case "linux":
+		if runtime.IsOpenharmony {
+			dirs = []string{"/system/bin"}
+		}
 	case "android":
 		dirs = []string{"/system/bin"}
 	case "plan9":

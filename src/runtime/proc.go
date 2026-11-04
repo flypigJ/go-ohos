@@ -811,6 +811,24 @@ func getGodebugEarly() (string, bool) {
 		// Similar to goenv_unix but extracts the environment value for
 		// GODEBUG directly.
 		// TODO(moehrmann): remove when general goenvs() can be called before cpuinit()
+
+		if libmusl {
+			if muslEnviron == nil {
+				return "", false
+			}
+			for environmentIndex := int32(0); ; environmentIndex++ {
+				entry := argv_index(muslEnviron, environmentIndex)
+				if entry == nil {
+					break
+				}
+				environment := unsafe.String(entry, findnull(entry))
+				if stringslite.HasPrefix(environment, prefix) {
+					return environment[len(prefix):], true
+				}
+			}
+			return "", true
+		}
+
 		n := int32(0)
 		for argv_index(argv, argc+1+n) != nil {
 			n++
