@@ -24,6 +24,12 @@ The SDK test was run with spaces in the SDK path. It caught and verified a corre
 
 GitHub Actions independently repeats the host checks on Linux and Windows. Consult [the workflow runs](https://github.com/flypigJ/go-ohos/actions/workflows/port.yml) for the actual result of a particular commit; a local receipt is not evidence that a remote run passed.
 
+## Target execution attempt
+
+A connected arm64 device reported API 26 and `OpenHarmony-7.0.0.111`. All four transferred files matched their host SHA-256 values. The loader was owned by `shell` with mode `0755`, but direct execution from the HDC temporary directory was denied with exit code **126** before library entrypoints ran. The core smoke program was therefore not attempted in that run. Temporary files were removed. See [the blocked attempt receipt](evidence/device-shell-attempt.json).
+
+This is an execution-environment restriction observed in that attempt, not a runtime-test pass or evidence of a Go crash. A separately signed HAP fixture is required for the next application-context check; it was not built or installed during this source-repository delivery.
+
 ## Not established by this preview
 
 - This newly named compiler's example library has not been executed on a device as part of this extraction.

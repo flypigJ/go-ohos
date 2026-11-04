@@ -40,7 +40,7 @@ python ohos/scripts/manage.py sdk-smoke --sdk $nativeSdk
 
 This compiles `ohos/examples/cshared`, its C header and `ohos/examples/loader.c`. Output is under `ohos/out/arm64`. The script requires AArch64 ELF, a TLS descriptor relocation and no initial-exec TLS relocation in the example library. It writes a receipt with library and loader hashes.
 
-On a compatible target where execution is authorized, run the loader with the library's absolute path. Its successful output is `PASS: 400 callbacks on four pthreads`. Loading inside a signed HAP/N-API application requires the consumer's own DevEco project and signing; neither SDK nor signing material is bundled here.
+On a compatible target where execution is authorized, run the loader with the library's absolute path. Its successful output is `PASS: 400 callbacks on four pthreads`. Some production devices deny direct HDC-shell execution even with executable permissions; the initial device attempt encountered that restriction. Loading inside a signed HAP/N-API application requires the consumer's own DevEco project and signing; neither SDK nor signing material is bundled here.
 
 ## Build another CGO library
 
