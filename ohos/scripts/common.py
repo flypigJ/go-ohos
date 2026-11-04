@@ -90,14 +90,13 @@ def native_sdk(root):
 
 
 def target_env(go_root, sdk, cache):
-    import shlex
     env = go_env(go_root)
     suffix = ".exe" if os.name == "nt" else ""
     # Go parses CC/CXX as quoted fields, including on Windows. Forward slashes
     # avoid treating backslashes as escapes; quotes preserve spaces in paths.
     def compiler(name):
         exe = (sdk / "llvm/bin" / (name + suffix)).as_posix()
-        return '"' + exe + '" --target=aarch64-linux-ohos --sysroot="' + (sdk / "sysroot").as_posix() + '" -D__MUSL__'
+        return '"' + exe + '" --target=aarch64-linux-ohos "--sysroot=' + (sdk / "sysroot").as_posix() + '" -D__MUSL__'
     env.update(GOOS="openharmony", GOARCH="arm64", CGO_ENABLED="1",
                CC=compiler("clang"), CXX=compiler("clang++"), GOCACHE=str(Path(cache).resolve()))
     return env

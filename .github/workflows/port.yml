@@ -1,0 +1,56 @@
+name: OpenHarmony port
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: port-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  host:
+    name: Host bootstrap (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+        with:
+          go-version: '1.27.3'
+          cache: false
+      - name: Script and documentation checks
+        run: python -m unittest discover -s ohos/tests -p "test_*.py" -v
+      - name: Documentation links
+        run: python ohos/scripts/check_docs.py
+      - name: Verify source
+        run: python ohos/scripts/manage.py verify
+      - name: Bootstrap pinned source
+        shell: pwsh
+        run: |
+          $bootstrap = go env GOROOT
+          python ohos/scripts/manage.py bootstrap --bootstrap $bootstrap
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Focused compiler and certificate tests
+        run: python ohos/scripts/manage.py test
+      - name: Preserve build receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: host-receipts-${{ matrix.os }}
+          path: |
+            ohos/out/bootstrap.json
+            ohos/out/host-tests.json
+          if-no-files-found: warn
+          retention-days: 14

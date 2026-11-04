@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "identity": "go1.27.3-ohos-devel",
+  "source_commit": "e0c4a7f95f3bf9c8480f50d918f19a14b6848374",
+  "source_manifest_sha256": "cf367683c42392d7f8092d6fc8e60bc6a2857232d62840bde648ca8e10ed2363",
+  "device_tested": false,
+  "version": "go version go1.27.3-ohos-devel windows/amd64",
+  "binaries": [
+    {
+      "path": "bin/go.exe",
+      "sha256": "258c4dba397613c6587f297a6eed00d81211fbe03bfd942dabf4371f8a122953"
+    },
+    {
+      "path": "bin/gofmt.exe",
+      "sha256": "d83e93eca23b31675e65b4601572ef5b05d6aa70e3d70bbd7943d9fbb8352cd3"
+    },
+    {
+      "path": "pkg/tool/windows_amd64/compile.exe",
+      "sha256": "a1cf384098df7f227e76c7a9bb076d336004c9624829c14c61eef4f7408f8a7e"
+    },
+    {
+      "path": "pkg/tool/windows_amd64/asm.exe",
+      "sha256": "07648829ad61e3cd06cfff15ff54c037be689c27e49a1c22dcf12a9886aa7a56"
+    },
+    {
+      "path": "pkg/tool/windows_amd64/link.exe",
+      "sha256": "28fa6138f0d51c22ba2354d0b67e0c9375869b7f5ac6de2274e425e3d516284e"
+    },
+    {
+      "path": "pkg/tool/windows_amd64/cgo.exe",
+      "sha256": "10a260796b3e1a50ad09618b613ec4af4fa6d8ca5ab989b22179d91fb38d4a34"
+    }
+  ],
+  "finished_at": "2026-11-04T16:21:17.209258+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "identity": "go1.27.3-ohos-devel",
+  "sdk_version": "26.0.0.105",
+  "library_sha256": "391e21ac70da4f9a06f57f01e95334b04b067b83d70d8551a22ea3f85aa09d74",
+  "loader_sha256": "d7b34b62720438faf4f5278d0d79b372aec2416d87d2a835478ec29eacfd70a8",
+  "device_executed": false
+}

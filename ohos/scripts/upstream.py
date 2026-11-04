@@ -49,9 +49,11 @@ def main():
             raise ValueError("invalid repository identifier")
     tags = []
     for page in range(1, 4):
-        batch = api(f"repos/{upstream}/tags?per_page=100&page={page}")
-        tags += batch
+        endpoint = "releases" if config.get("use_releases") else "tags"
+        batch = api(f"repos/{upstream}/{endpoint}?per_page=100&page={page}")
+        tags += [t for t in batch if not t.get("prerelease") and not t.get("draft")]
         if len(batch) < 100: break
+    tags = [{"name": t.get("tag_name", t.get("name"))} for t in tags]
     head = api(f"repos/{upstream}/git/ref/heads/{config['branch']}")["object"]["sha"]
     if not re.fullmatch(r"[0-9a-f]{40}", head):
         raise ValueError("invalid upstream commit")
@@ -67,7 +69,7 @@ def main():
         batch = api(f"repos/{owner}/issues?state=open&per_page=100&page={page}")
         issues += batch
         if len(batch) < 100: break
-    matches = [i for i in issues if i["title"] == title and "pull_request" not in i]
+    matches = [i for i in issues if i["title"] == title and "pull_request" not in i and "<!-- ohos-upstream-monitor -->" in (i.get("body") or "")]
     if len(matches) > 1:
         raise ValueError("multiple tracking issues; refusing ambiguous update")
     if not result["new_release"] and not result["mainline_changed"]:

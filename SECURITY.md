@@ -1,13 +1,7 @@
-# Security Policy
+# Security reporting
 
-## Supported Versions
+For sensitive findings, use this repository's GitHub private vulnerability reporting feature when it is available. Do not put exploit details affecting real users, credentials or private account data in a public issue. If private reporting is unavailable, open a minimal issue asking for a private contact without technical exploit details.
 
-We support the past two Go releases (for example, Go 1.17.x and Go 1.18.x when Go 1.18.x is the latest stable release).
+Reports should identify the source revision and affected build, describe prerequisites and impact, and include a minimal reproducible case. The project is a community preview and has no guaranteed response-time SLA.
 
-See https://go.dev/wiki/Go-Release-Cycle and in particular the
-[Release Maintenance](https://go.dev/wiki/Go-Release-Cycle#release-maintenance)
-part of that page.
-
-## Reporting a Vulnerability
-
-See https://go.dev/security/policy for how to report a vulnerability.
+Upstream Go/Tailscale vulnerabilities should also follow the relevant upstream security reporting process. Keeping a downstream version number current does not alone establish that all applicable security fixes are present.

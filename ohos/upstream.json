@@ -1,0 +1,8 @@
+{
+  "qualified_tag": "go1.27.3",
+  "observed_mainline_commit": "672197524bb07e861597bc0447110522ebbde80f",
+  "branch": "master",
+  "tag_prefix": "go",
+  "upstream": "golang/go",
+  "repository": "flypigJ/go-ohos"
+}

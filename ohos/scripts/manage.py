@@ -73,7 +73,7 @@ def compiler_ready():
     return lock
 
 
-def test():
+def test_checked():
     compiler_ready()
     env = go_env(ROOT)
     env.update(GOCACHE=str(OUT / "host-cache"), GOPROXY="off", GOSUMDB="off")
@@ -85,7 +85,16 @@ def test():
     write(OUT / "host-tests.json", {"status": "passed", "scope": "selected compiler/platform and x509 tests", "full_stdlib": False, "device_tested": False})
 
 
-def sdk_smoke(sdk_root):
+def test():
+    write(OUT / "host-tests.json", {"status": "running", "device_tested": False})
+    try:
+        test_checked()
+    except Exception:
+        write(OUT / "host-tests.json", {"status": "failed", "device_tested": False})
+        raise
+
+
+def sdk_smoke_checked(sdk_root):
     lock = compiler_ready()
     sdk, info = native_sdk(sdk_root)
     env = target_env(ROOT, sdk, OUT / "target-cache")
@@ -107,10 +116,21 @@ def sdk_smoke(sdk_root):
                               "library_sha256": digest(library), "loader_sha256": digest(out / "loader"), "device_executed": False})
 
 
+def sdk_smoke(sdk_root):
+    receipt_path = OUT / "arm64/build.json"
+    write(receipt_path, {"status": "building", "device_executed": False})
+    try:
+        sdk_smoke_checked(sdk_root)
+    except Exception:
+        write(receipt_path, {"status": "failed", "device_executed": False})
+        raise
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("verify")
+    sub.add_parser("verify-compiler")
     p = sub.add_parser("bootstrap")
     p.add_argument("--bootstrap", required=True, help="official Go 1.27.3 installation")
     sub.add_parser("test")
@@ -118,6 +138,7 @@ def main():
     p.add_argument("--sdk", required=True, help="API 26 native SDK directory")
     args = parser.parse_args()
     if args.command == "verify": verify(); print("Pinned port source verified")
+    elif args.command == "verify-compiler": compiler_ready(); print("Compiler receipt and source verified")
     elif args.command == "bootstrap": bootstrap(args.bootstrap)
     elif args.command == "test": test()
     else: sdk_smoke(args.sdk)
