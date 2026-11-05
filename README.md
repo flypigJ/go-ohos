@@ -8,6 +8,8 @@ A community OpenHarmony port of Go 1.27.3, maintained alongside MeshArc.
 
 **Developer preview, not an official Go or Huawei release.** The initial integration target is **HarmonyOS API 26 / arm64 / CGO shared libraries**. The compiler uses the distinct identity `go1.27.3-ohos-devel`. Read the platform limits before adopting it: the inherited runtime exposes Linux identity, assumes a 39-bit arm64 heap address space, and has not completed full target standard-library or signal/lifecycle qualification.
 
+The freshly built example and its Tailscale consumer passed a [signed-HAP device probe](ohos/docs/validation.md): three cold starts and 1,200 threaded CGO callbacks per library on API 26 arm64. Exact input/package hashes and per-run results are recorded; the full target standard library and lifecycle remain unqualified.
+
 ## Build your own toolchain
 
 Install Git, Python 3.11+ and official Go 1.27.3. On Windows PowerShell:
